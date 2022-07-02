@@ -1,0 +1,68 @@
+.weather-box {
+  position: relative;
+  margin: auto;
+  width: 800px;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.weather-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+.location {
+  margin: auto;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.weather-box .input-box {
+  position: relative;
+}
+
+.weather-box .input-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+.weather-box .input-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.weather-box .input-box input:focus ~ label,
+.weather-box .input-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 12px;
+}
+
+.weather-btn {
+  color: rgb(10, 9, 9);
+  background-color: #fff;
+  margin: auto;
+  display: block;
+  border-radius: 5px;
+  padding: 10px;
+}
