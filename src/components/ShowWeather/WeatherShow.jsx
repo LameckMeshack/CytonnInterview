@@ -32,9 +32,26 @@ const WeatherShow = () => {
           setCloudCover(data.hourly.cloudcover_mid.slice(6, 19));
           setTime(data.hourly.time.slice(6, 19));
         }
+        //customizing error messages for the user to understand what went wrong
         if (data.error) {
           setErr(true);
           setErrorMsg(data.reason);
+          //if the errorMsg has the word "Latitude" AND "Float" OR "90" in it, then the user has entered a wrong latitude else if the errorMsg has the word "Longitude" AND "Float" OR "180" in it, then the user has entered a wrong longitude
+          if (
+            data.reason.includes("latitude") &&
+            data.reason.includes("Float")
+          ) {
+            setErrorMsg(
+              "Invalid latitude.It must be a float/ decimal number between -90 and 90"
+            );
+          } else if (
+            data.reason.includes("longitude") &&
+            data.reason.includes("Float")
+          ) {
+            setErrorMsg(
+              "Invalid longitude.It must be a float/ decimal number between -180 and 180"
+            );
+          }
         }
       }
     }
