@@ -2,7 +2,7 @@
   background: rgba(0, 0, 0, 0.5);
   width: 150px;
   border-radius: 10px;
-  margin: auto;
+  margin: 10px;
 }
 .card-header {
   font-weight: bold;
@@ -10,7 +10,7 @@
 .header-content {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   padding-top: 5px;
 }
