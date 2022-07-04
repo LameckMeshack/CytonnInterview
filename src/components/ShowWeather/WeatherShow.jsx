@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./weatherShow.css";
 import { ReactComponent as Globe } from "../assets/globe.svg";
-import HourlyWeatherCard from "../HourlyCard/HourlyWeatherCard";
-
+import HourCard from "../cards/HourCard";
+import ErrorMsgBox from "../Msg/ErrorMsgBox";
 const WeatherShow = () => {
   const [latitude, setLatitude] = useState("");
   const [longitude, setLongitude] = useState("");
@@ -64,9 +64,7 @@ const WeatherShow = () => {
     windSpeed: windSpeed,
     cloudCover: cloudCover,
   };
-  // useEffect(() => {
-  //   getWeather();
-  // }, [latitude, longitude]);
+
   return (
     <>
       <div className="weather-box">
@@ -105,16 +103,14 @@ const WeatherShow = () => {
       </div>
 
       {err ? (
-        <div className="error">
-          <p>{errorMsg}</p>
-        </div>
+        <ErrorMsgBox errorMsg={errorMsg} />
       ) : (
         <div className="container">
           {/* loop to create the hourly weather cards */}
           {hourWeather.time.map((time, index) => (
-            <HourlyWeatherCard
+            <HourCard
               key={index}
-              time={time}
+              time={time.split("T")[1].split(":")[0]}
               temp={hourWeather.temp[index]}
               humidity={hourWeather.humidity[index]}
               windSpeed={hourWeather.windSpeed[index]}
@@ -128,8 +124,3 @@ const WeatherShow = () => {
 };
 
 export default WeatherShow;
-
-// eslint-disable-next-line no-lone-blocks
-{
-  /* <HourlyWeatherCard time={time} temp={temp} humidity={humidity} /> */
-}

@@ -1,12 +1,26 @@
 body {
   margin: 0;
   padding: 0;
+  padding-bottom: 60px;
+  background-color: #c8d8e4;
+}
+.brand,
+.footer {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2b6777;
+  background: #ffffff;
+  text-align: center;
+  justify-content: center;
+
+  width: 100%;
 }
 .brand {
-  font-size: 1.5rem;
-  padding: 1px;
-  font-weight: bold;
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.5);
-  text-align: center;
+  top: 0;
+  padding: 10px 0;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
 }

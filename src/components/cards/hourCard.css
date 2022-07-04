@@ -1,0 +1,65 @@
+.hour-card {
+  background: #2b6777;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 20px;
+  width: 200px;
+}
+.hour-card-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 2px dotted #c8d8e4;
+}
+.plane {
+  flex: 1;
+}
+.time {
+  color: #c8d8e4;
+  flex: 2;
+  font-size: 40px;
+  font-weight: 400;
+}
+/* small text to be raised to the top of the card */
+.small {
+  color: #c8d8e4;
+  font-size: 12px;
+  font-weight: bold;
+}
+/* temp-box */
+.temp-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  width: 60%;
+}
+.temp {
+  color: #c8d8e4;
+  flex: 1;
+  font-size: 30px;
+  font-weight: 300;
+}
+.reading {
+  color: #c8d8e4;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.box {
+  color: #c8d8e4;
+  font-weight: 300;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+}

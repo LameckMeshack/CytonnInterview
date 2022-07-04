@@ -1,18 +1,17 @@
 .weather-box {
   position: relative;
-  margin: auto;
+  margin: 20px auto;
   width: 800px;
   padding: 40px;
-  background: rgba(0, 0, 0, 0.5);
+  background: #2b6777;
   box-sizing: border-box;
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
   border-radius: 10px;
 }
 
 .weather-box h2 {
   margin: 0 0 30px;
   padding: 0;
-  color: #fff;
+  color: #f2f2f2;
   text-align: center;
 }
 .location {
@@ -54,12 +53,16 @@
 .weather-box .input-box input:valid ~ label {
   top: -20px;
   left: 0;
-  color: #03e9f4;
-  font-size: 12px;
+  color: #f2f2f2;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .weather-btn {
-  color: rgb(10, 9, 9);
+  color: #2b6777;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
   background-color: #fff;
   margin: auto;
   display: block;
@@ -67,11 +70,8 @@
   padding: 10px;
 }
 .container {
-  margin-top: 50px;
-  padding: 10px;
   margin: auto;
   max-width: 1200px;
-
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -87,4 +87,34 @@
   padding: 10px;
   width: fit-content;
   margin: 20px auto;
+
+  animation: shake-animation 2.72s ease infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes shake-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  1.78571% {
+    transform: translate(5px, 0);
+  }
+  3.57143% {
+    transform: translate(0, 0);
+  }
+  5.35714% {
+    transform: translate(5px, 0);
+  }
+  7.14286% {
+    transform: translate(0, 0);
+  }
+  8.92857% {
+    transform: translate(5px, 0);
+  }
+  10.71429% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
