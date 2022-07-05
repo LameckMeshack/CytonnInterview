@@ -30,7 +30,7 @@ const WeatherShow = () => {
           setHumidity(data.hourly.relativehumidity_2m.slice(6, 19));
           setWindSpeed(data.hourly.windspeed_120m.slice(6, 19));
           setCloudCover(data.hourly.cloudcover_mid.slice(6, 19));
-          setTime(data.hourly.time.slice(6, 19));
+          setTime(data.hourly.time.slice(6, 18));
         }
         //customizing error messages for the user to understand what went wrong
         if (data.error) {
@@ -63,6 +63,11 @@ const WeatherShow = () => {
     humidity: humidity,
     windSpeed: windSpeed,
     cloudCover: cloudCover,
+  };
+
+  const closeMsg = () => {
+    setErr(false);
+    setTime([]);
   };
 
   return (
@@ -103,7 +108,7 @@ const WeatherShow = () => {
       </div>
 
       {err ? (
-        <ErrorMsgBox errorMsg={errorMsg} />
+        <ErrorMsgBox closeMsg={closeMsg} errorMsg={errorMsg} />
       ) : (
         <div className="container">
           {/* loop to create the hourly weather cards */}

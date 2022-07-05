@@ -2,18 +2,17 @@ body {
   margin: 0;
   padding: 0;
   padding-bottom: 60px;
-  background-color: #c8d8e4;
+  background-color: #fff;
 }
 .brand,
 .footer {
   font-size: 1.5rem;
   font-weight: bold;
+  width: 100%;
   color: #2b6777;
-  background: #ffffff;
+  background: #c8d8e4;
   text-align: center;
   justify-content: center;
-
-  width: 100%;
 }
 .brand {
   top: 0;

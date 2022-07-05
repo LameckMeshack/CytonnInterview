@@ -1,7 +1,8 @@
 .weather-box {
   position: relative;
-  margin: 20px auto;
-  width: 800px;
+  margin: -30px auto;
+  margin-bottom: 10px;
+  width: 50%;
   padding: 40px;
   background: #2b6777;
   box-sizing: border-box;
@@ -83,7 +84,7 @@
   font-size: 20px;
   text-align: center;
   border-radius: 10px;
-  background-color: rgb(218, 44, 44);
+  background-color: rgb(207, 137, 137);
   padding: 10px;
   width: fit-content;
   margin: 20px auto;
@@ -116,5 +117,15 @@
   }
   100% {
     transform: translate(0, 0);
+  }
+}
+
+/* media queries */
+@media screen and (max-width: 600px) {
+  .weather-box {
+    width: 90%;
+  }
+  .location {
+    flex-direction: column;
   }
 }

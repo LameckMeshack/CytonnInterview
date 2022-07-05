@@ -3,7 +3,7 @@ import React from "react";
 const Header = () => {
   return (
     <div className="brand">
-      <h1>Cywheather AirStrip</h1>
+      <h1>CyWheather AirStrip</h1>
     </div>
   );
 };

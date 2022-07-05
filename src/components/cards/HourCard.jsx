@@ -8,7 +8,8 @@ const HourCard = ({ time, temp, humidity, windSpeed, cloudCover }) => {
           <img src={require("../assets/plane.png")} width="30px" alt="" />
         </div>
         <div className="time">
-          {time}00 <span className="small">HRS</span>
+          {time > 12 ? time - 12 : time}:00{" "}
+          <span className="small">{time > 12 ? "pm" : "am"}</span>
         </div>
       </div>
       <div className="temp-box">
